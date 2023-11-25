@@ -1,0 +1,10 @@
+.userContainerDiv {
+    display: flex;
+    gap: 20px;
+    max-width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 30px;
+    border: 2px solid rgb(219, 218, 218);
+    border-radius:  40px;
+}

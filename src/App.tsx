@@ -7,7 +7,7 @@ import Main from './pages/Main'
 function App() {
 
   return (
-    <div className="grid grid-cols-8 mt-6">
+    <div className="grid grid-cols-8 mt-6 gap-2">
       <LeftSidebar />
       <Main />
       <RightSidebar />
