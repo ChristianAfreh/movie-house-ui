@@ -49,12 +49,12 @@ export default function MenuList() {
     <div className="mt-5">
       <ul>
         {menuItems.map((menuItem: MenuItem, index: number) =>
-          <li key={index} className="flex my-6 mx-2 px-[3rem] 
+          <li key={index} className="flex my-6 mx-2 px-[3rem] font-bold
           hover:cursor-pointer hover:bg-gradient-to-r from-orange-200 to-red-500 
           hover:text-white hover:rounded-lg 
           hover:ease-linear active:">
             <span className="text-2xl">{menuItem.icon}</span>
-            <span className="font-medium ml-6">{menuItem.title}</span>
+            <span className="ml-6">{menuItem.title}</span>
           </li>
         )}
       </ul>
