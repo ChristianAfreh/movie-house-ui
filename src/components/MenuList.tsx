@@ -1,5 +1,10 @@
-import { RiHome3Line,  } from "react-icons/ri";
-import { BsListCheck,BsPerson } from "react-icons/bs";
+import { RiMovie2Line  } from "react-icons/ri";
+import { BsListCheck } from "react-icons/bs";
+import { GrGroup } from "react-icons/gr";
+import { BiCameraMovie } from "react-icons/bi";
+import { IoHomeOutline } from "react-icons/io5";
+import { FaRankingStar } from "react-icons/fa6";
+import { PiShootingStar } from "react-icons/pi";
 
 interface MenuItem {
   title: string,
@@ -15,7 +20,7 @@ export default function MenuList() {
   const menuItems: MenuItem[] = [
     {
       title: "Home",
-      icon: <RiHome3Line />,
+      icon: <IoHomeOutline />,
       path: "/"
     },
     {
@@ -25,22 +30,22 @@ export default function MenuList() {
     },
     {
       title: "Top Rated",
-      icon: <BsPerson />,
+      icon: <PiShootingStar />,
       path: "/"
     },
     {
       title: "New Releases",
-      icon: <BsPerson />,
+      icon: <RiMovie2Line />,
       path: "/"
     },
     {
       title: "Top Actors",
-      icon: <BsPerson />,
+      icon: <GrGroup />,
       path: "/"
     },
     {
       title: "Top Producers",
-      icon: <BsPerson />,
+      icon: <BiCameraMovie />,
       path: "/"
     }
   ]
