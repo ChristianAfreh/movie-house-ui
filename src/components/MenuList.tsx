@@ -19,27 +19,27 @@ export default function MenuList() {
       path: "/"
     },
     {
-      title: "Categories",
+      title: "Genres",
       icon: <BsListCheck />,
       path: "/"
     },
     {
-      title: "Artists",
+      title: "Top Rated",
       icon: <BsPerson />,
       path: "/"
     },
     {
-      title: "Artists",
+      title: "New Releases",
       icon: <BsPerson />,
       path: "/"
     },
     {
-      title: "Artists",
+      title: "Top Actors",
       icon: <BsPerson />,
       path: "/"
     },
     {
-      title: "Artists",
+      title: "Top Producers",
       icon: <BsPerson />,
       path: "/"
     }
@@ -49,7 +49,7 @@ export default function MenuList() {
     <div className="mt-5">
       <ul>
         {menuItems.map((menuItem: MenuItem, index: number) =>
-          <li key={index} className="flex my-6 mx-2 px-[3rem] font-bold
+          <li key={index} className="flex my-6 mx-1 px-[1.5rem] font-bold
           hover:cursor-pointer hover:bg-gradient-to-r from-orange-200 to-red-500 
           hover:text-white hover:rounded-lg 
           hover:ease-linear active:">
