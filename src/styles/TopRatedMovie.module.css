@@ -1,0 +1,11 @@
+.topRatedContainer {
+    /* Linear gradient from top to bottom */
+    background: linear-gradient(to bottom, #3494e6, #ec6ead), url('../assets/posters/theCollectivePoster.jpeg');
+    
+    /* Background properties */
+    background-size: cover; /* Adjust as needed */
+    background-position: center center; /* Adjust as needed */
+    background-attachment: fixed; /* Fixed or scroll, depending on your preference */
+    color: #ffffff; /* Text color for better contrast */
+  }
+  
