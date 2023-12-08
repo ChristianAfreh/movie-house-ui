@@ -1,4 +1,3 @@
-import styles from '../styles/TopRatedMovie.module.css';
 
 import MovieItem from '../components/Movie/MovieItem';
 import Search from '../components/Search';
@@ -17,7 +16,7 @@ interface Movie {
 export default function Main() {
   const movies: Movie[] = [
     {
-      title: "LalaLand",
+      title: "La La Land",
       posterPath: lalalandPoster,
       rating: 4.3
     },
@@ -51,7 +50,7 @@ export default function Main() {
 
       <div className="h-full flex items-center justify-center"
          style={{
-           backgroundImage: `linear-gradient(to bottom, rgba(52, 148, 230, 0.8), rgba(236, 110, 173, 0.8)), url(${operationFortunePoster})`,
+           backgroundImage: `linear-gradient(to bottom, rgb(187 204 219 / 30%), rgb(116 48 82 / 59%)), url(${operationFortunePoster})`,
            backgroundSize: 'cover',
            backgroundPosition: 'center center',
            color: '#ffffff',
