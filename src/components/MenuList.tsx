@@ -57,7 +57,7 @@ export default function MenuList() {
           <li key={index} className="flex my-6 mx-1 px-[1.5rem] font-bold
           hover:cursor-pointer hover:bg-gradient-to-r from-orange-200 to-red-500 
           hover:text-white hover:rounded-lg 
-          hover:ease-linear active:">
+          hover:ease-linear hover: py-1">
             <span className="text-2xl">{menuItem.icon}</span>
             <span className="ml-6">{menuItem.title}</span>
           </li>
