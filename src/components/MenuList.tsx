@@ -3,7 +3,6 @@ import { BsListCheck } from "react-icons/bs";
 import { GrGroup } from "react-icons/gr";
 import { BiCameraMovie } from "react-icons/bi";
 import { IoHomeOutline } from "react-icons/io5";
-import { FaRankingStar } from "react-icons/fa6";
 import { PiShootingStar } from "react-icons/pi";
 
 interface MenuItem {
