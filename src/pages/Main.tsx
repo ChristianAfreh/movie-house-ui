@@ -81,7 +81,7 @@ export default function Main() {
     <div className="col-span-5 pt-15 border-x-2 border-grey-600 pb-4 px-4">
       <Search />
 
-      <h1 className="text-xl mx-8 font-bold my-4">Top Rated Movie</h1>
+      <h1 className="text-xl mx-4 font-bold my-4">Top Rated Movie</h1>
 
       <div className="h-full flex items-center justify-center mb-8"
          style={{
