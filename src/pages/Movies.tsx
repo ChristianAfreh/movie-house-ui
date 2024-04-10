@@ -88,7 +88,7 @@ export default function Movies() {
         <div className="col-span-5 pt-15 border-x-2 border-grey-600 pb-4 px-4">
             <Search />
             <div className="mt-8">
-                <div className="text-right">
+                <div className="text-right mr-1">
                     <AddButton />
                 </div>
                 <div className="mt-5">
