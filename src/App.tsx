@@ -12,7 +12,7 @@ import Actors from './pages/Actors';
 import Producers from './pages/Producers';
 import Genres from './pages/Genres';
 
-function App() {
+const App : React.FC = () => {
 
   return (
     <div className="grid grid-cols-8 mt-6 gap-2">
@@ -36,4 +36,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

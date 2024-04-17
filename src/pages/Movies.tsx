@@ -13,6 +13,9 @@ import tombRaider from '../assets/posters/tombRaider.png';
 import sahara from '../assets/posters/sahara.png';
 import inTime from '../assets/posters/inTime.png';
 import AddButton from "../components/AddButton";
+import TextField from "../components/TextField";
+import AddMovieForm from "../components/Movie/AddMovieForm";
+
 
 
 interface Movie {
@@ -22,7 +25,6 @@ interface Movie {
 }
 
 export default function Movies() {
-
 
     const topRatedMovies: Movie[] = [
         {
@@ -89,7 +91,7 @@ export default function Movies() {
             <Search />
             <div className="mt-8">
                 <div className="text-right mr-1">
-                    <AddButton />
+                    <AddMovieForm />
                 </div>
                 <div className="mt-5">
                     <MovieList listTitle="Top Rated" movies={topRatedMovies} />

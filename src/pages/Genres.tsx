@@ -11,6 +11,8 @@ import romance from "../assets/genres/romance.jpg";
 import sciFi from "../assets/genres/sciFi.jpg";
 import thriller from "../assets/genres/thriller.jpg";
 import GenreList from "../components/Genre/GenreList";
+import AddButton from "../components/AddButton";
+import AddGenreForm from "../components/Genre/AddGenreForm";
 
 interface Genre {
     name: string,
@@ -79,7 +81,16 @@ export default function Genres() {
     return (
         <div className="col-span-5 pt-15 border-x-2 border-grey-600 pb-4 px-4">
             <Search />
-            <GenreList listTitle="Genres" genres={genres} />
+            <div className="mt-8">
+                <div className="text-right mr-1">
+                    <AddGenreForm />
+                </div>
+                <div className="mt-5">
+                <GenreList listTitle="Genres" genres={genres} />
+                </div>
+            </div>
+
         </div>
     )
 }
+
