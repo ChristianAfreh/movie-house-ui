@@ -6,6 +6,7 @@ import brianGrazer from "../assets/producers/brianGrazer.jpg";
 import bruceCohen from "../assets/producers/bruceCohen.jpg";
 import frankMarshall from "../assets/producers/frankMarshall.jpg";
 import kathleenKennedy from "../assets/producers/kathleenKennedy.jpg";
+import AddProducerForm from "../components/Producer/AddProducerForm";
 
 
 interface Producer {
@@ -68,18 +69,26 @@ export default function Producers() {
             imageUrl: frankMarshall,
             moviesProduced: 15,
             awardsReceived: 11,
-        },   
+        },
     ];
 
 
     return (
         <div className="col-span-5 pt-15 border-x-2 border-grey-600 pb-4 px-4">
             <Search />
+            <div className="mt-8">
+                <div className="text-right mr-1">
+                    <AddProducerForm />
+                </div>
+                <div className="mt-5">
+                    <ProducerList listTitle="Top Rated Producers" producers={topRatedProducers} />
 
-            <ProducerList listTitle="Top Rated Producers" producers={topRatedProducers} />
-
-            <ProducerList listTitle="Most Awarded Producers" producers={mostAwardReceivedProducers} />
+                    <ProducerList listTitle="Most Awarded Producers" producers={mostAwardReceivedProducers} />
+                </div>
+            </div>
 
         </div>
-    )
+    );
 }
+
+

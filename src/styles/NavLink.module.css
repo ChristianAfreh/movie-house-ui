@@ -1,0 +1,22 @@
+.navLink{
+    display:flex;
+    margin: 1.5rem 0.25rem;
+    font-weight: 700;
+    padding: 0.25rem 1.5rem;
+}
+
+.navLink:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(247, 247, 92), rgba(226, 18, 18, 0.795));
+    color: white;
+    border-radius: 0.5rem;
+    transition-timing-function: linear;
+}
+
+.navLink:active{
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(247, 247, 92), rgba(226, 18, 18, 0.795));
+    color: white;
+    border-radius: 0.5rem;
+    transition-timing-function: linear;
+}

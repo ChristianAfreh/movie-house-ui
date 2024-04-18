@@ -35,14 +35,14 @@ const Modal = ({open, onClose, title,children}:PropTypes) => {
                 </div>
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                   <button
-                    className="text-white bg-red-500 active:bg-red-700 font-bold px-3 py-2 rounded text-sm outline-none shadow-sm focus:outline-none mr-1 mb-1 hover: hover:shadow-xl"
+                    className="text-white bg-red-500 active:bg-red-700 font-bold px-3 py-2 rounded text-sm outline-none shadow-sm focus:outline-none mr-1 mb-1 hover:bg-red-700 hover: hover:shadow-xl"
                     type="button"
                     onClick={onClose}
                   >
                     Cancel
                   </button>
                   <button
-                    className="text-white bg-green-500 active:bg-green-700 font-bold text-sm px-3 py-2 rounded shadow-sm hover:shadow-xl outline-none focus:outline-none mx-1 mb-1"
+                    className="text-white bg-green-500 active:bg-green-700 font-bold text-sm px-3 py-2 rounded shadow-sm hover:shadow-xl outline-none focus:outline-none mx-1 mb-1 hover:bg-green-700"
                     type="button"
                     onClick={onClose}
                   >

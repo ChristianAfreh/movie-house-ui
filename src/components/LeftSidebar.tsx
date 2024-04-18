@@ -1,4 +1,4 @@
-import React from 'react';
+
 import BrandLogo from './BrandLogo';
 import MenuList from './MenuList';
 
