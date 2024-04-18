@@ -5,6 +5,7 @@ import { BiCameraMovie } from "react-icons/bi";
 import { IoHomeOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/NavLink.module.css";
+import { useState } from "react";
 
 interface MenuItem {
   title: string,
@@ -16,7 +17,6 @@ interface MenuItem {
 
 
 export default function MenuList() {
-
   const menuItems: MenuItem[] = [
     {
       title: "Home",
@@ -45,10 +45,18 @@ export default function MenuList() {
     },
   ]
 
+  const [activeItem, setactiveItem] = useState(menuItems[0].title);
+
+  const handleClick = (itemName:string) => {
+    setactiveItem(itemName);
+  }
+
+ 
+
   return (
     <nav className="mt-5">
       {menuItems.map((menuItem: MenuItem, index: number) =>
-        <NavLink to={menuItem.path} key={index} className={styles.navLink}>
+        <NavLink onClick={() => handleClick(menuItem.title)} to={menuItem.path} key={index} className={styles.navLink +" "+ (activeItem === menuItem.title ? `${styles.activeLink}` : "")}>
           <span className="text-2xl">{menuItem.icon}</span>
           <span className="ml-6">{menuItem.title}</span>
         </NavLink>

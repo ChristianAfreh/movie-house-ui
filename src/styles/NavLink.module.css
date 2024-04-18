@@ -13,7 +13,7 @@
     transition-timing-function: linear;
 }
 
-.navLink:active{
+.activeLink{
     cursor: pointer;
     background-image: linear-gradient(to right, rgb(247, 247, 92), rgba(226, 18, 18, 0.795));
     color: white;
