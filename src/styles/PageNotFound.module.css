@@ -1,0 +1,6 @@
+
+.imageDiv{
+    width: 65rem;
+    height: auto;
+    object-fit: contain;
+}

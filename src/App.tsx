@@ -11,6 +11,7 @@ import './App.css';
 import Actors from './pages/Actors';
 import Producers from './pages/Producers';
 import Genres from './pages/Genres';
+import NotFound from './pages/NotFound';
 
 const App : React.FC = () => {
 
@@ -25,7 +26,8 @@ const App : React.FC = () => {
           <Route path="/movies" element={<Movies />} />
           <Route path="/genres" element={<Genres />} />
           <Route path="/actors" element={<Actors />} />
-          <Route path="/producers" element={<Producers />} />  
+          <Route path="/producers" element={<Producers />} />
+          <Route path="*"  element={<NotFound />} />  
         </Routes>
         
         <RightSidebar />
