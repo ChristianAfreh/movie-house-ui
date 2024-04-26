@@ -2,7 +2,7 @@ import { BsStarHalf } from "react-icons/bs"
 
 interface PropItems {
   title: string,
-  rating?: number,
+  rating?: string,
   src: string
 }
 

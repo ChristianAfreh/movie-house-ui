@@ -13,14 +13,63 @@ import piratesOfTheCarribean from '../assets/posters/piratesOfTheCaribbean.png';
 import tombRaider from '../assets/posters/tombRaider.png';
 import sahara from '../assets/posters/sahara.png';
 import inTime from '../assets/posters/inTime.png';
+import { useEffect, useState } from 'react';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 interface Movie {
   title: string,
-  posterPath: string,
-  rating?: number 
+  poster_path: string,
+  vote_average?: number 
 }
 
 export default function Main() {
+
+  const [popularMovies,setPopularMovies] = useState([]);
+  const [topRatedMovies,setTopRatedMovies] = useState([]);
+  const [upcomingMovies, setUpcomingMovies] = useState([]);
+  
+
+    useEffect(() => {
+       getPopularMovies();
+       getTopRatedMovies();
+       getUpcomingMovies();
+
+    }, []);
+
+    const baseUrl : string = 'https://api.themoviedb.org/3';
+
+    const configOptions : AxiosRequestConfig<any> | undefined  = {
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNDAwNWVkZjUxYjFiYzhhZjlhOTU5YTMyMzAyYzY1OCIsInN1YiI6IjY2MmE1YmI5OGQ3N2M0MDA5YTJkYjhiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.OzEt_q5wwos9i30lfK6KpltD5wR0IduMVtwCslSouC4'
+      }
+    };
+
+
+    const getMovies = async (type: string) => {
+
+      const response : AxiosResponse<any,any> = await axios.get(baseUrl+'/movie/'+type,configOptions);
+
+      const responseData = response.data.results.slice(0,5);
+
+      return responseData;
+    }
+
+    const getPopularMovies = async () => {
+      const result = await getMovies('popular');
+      setPopularMovies(result);
+    };
+
+    const getTopRatedMovies = async () => {
+      const result = await getMovies('top_rated');
+      setTopRatedMovies(result);
+    }
+
+    const getUpcomingMovies = async () => {
+      const result = await getMovies('upcoming');
+      setUpcomingMovies(result);
+    }
+    
 
   const trendingMovies: Movie[] = [
     {
@@ -96,9 +145,11 @@ export default function Main() {
 
       </div>
 
-      <MovieList listTitle="Newly Released Movies" movies={newlyReleasedMovies} />
+      <MovieList listTitle="Upcoming Movies" movies={upcomingMovies} />
 
-      <MovieList listTitle="Trending Movies" movies={trendingMovies} />
+      <MovieList listTitle="Top Rated Movies" movies={topRatedMovies} />
+
+      <MovieList listTitle="Popular Movies" movies={popularMovies} />
 
       
 
