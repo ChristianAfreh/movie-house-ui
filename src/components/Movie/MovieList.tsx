@@ -21,11 +21,13 @@ const MovieList: React.FC<MovieListProps> = ({ listTitle, movies })  => {
     <>
       <h1 className="mt-4 mx-4 text-xl font-bold">{listTitle}</h1>
 
-      <div className="flex justify-evenly max-w-32 mx-1 gap-2">
+      <div className="flex justify-start max-w-32 mx-1 gap-2 overflow-x-auto">
+
 
         {
-          movies.map((movie: Movie, index: number) => <MovieItem key={index} title={movie.title} rating={movie.vote_average?.toFixed(1)} src={'https://image.tmdb.org/t/p/w500'+movie.poster_path} />)
+          movies.map((movie: Movie, index: number) => <MovieItem key={index} title={movie.title} rating={movie.vote_average?.toFixed(1)} src={'https://image.tmdb.org/t/p/original'+movie.poster_path} />)
         }
+
 
       </div>
     </>

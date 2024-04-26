@@ -50,7 +50,7 @@ export default function Main() {
 
       const response : AxiosResponse<any,any> = await axios.get(baseUrl+'/movie/'+type,configOptions);
 
-      const responseData = response.data.results.slice(0,5);
+      const responseData = response.data.results;
 
       return responseData;
     }
